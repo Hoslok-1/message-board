@@ -3,6 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const router = (0, express_1.Router)();
 router.get('/', (req, res) => {
-    res.send("wagwan famalam");
+    res.send('wagwan famalam');
 });
 exports.default = router;
