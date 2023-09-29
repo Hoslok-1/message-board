@@ -6,19 +6,23 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
-<body>
-    <div>
-        <h1 class="font-bold text-4xl">Messages</h1>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h1 class="font-bold text-4xl mb-8">Messages</h1>
         <ul>
             <% messages.forEach(item => { %>
-                <li>
-                    <span>User:</span> <%= item.user %>
-                </li>
-                <li>
-                    <span>Text:</span> <%= item.text %>
-                </li>
-                <li>
-                    <span>Added:</span> <%= item.added %>
+                <li class="bg-white rounded-lg shadow-md p-4 mb-4">
+                    <div class="flex justify-between items-center">
+                        <span class="font-semibold text-lg">
+                           <%= item.user %>
+                        </span>
+                        <span class="text-sm text-gray-500">
+                            Added: <%= item.added %>
+                        </span>
+                    </div>
+                    <p class="mt-2">
+                        <%= item.text %>
+                    </p>
                 </li>
             <% }); %>
         </ul>
