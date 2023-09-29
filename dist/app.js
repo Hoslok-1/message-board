@@ -12,6 +12,7 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.set('views', path_1.default.join(__dirname, '../src/views'));
 app.use(express_1.default.urlencoded({ extended: false }));
+app.use(express_1.default.static(path_1.default.join(__dirname, '../src/views')));
 app.use('/users', users_1.default);
 app.use('/index', index_1.default);
 app.get('/', (req, res) => {
