@@ -9,22 +9,27 @@
 <body class="bg-gray-100">
     <div class="container mx-auto p-8">
         <h1 class="font-bold text-4xl mb-8">Messages</h1>
+        <div class="mb-8">
+            <a href="/new" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded inline-block">
+                Add a Message
+            </a>
+        </div>
         <ul>
-            <% messages.forEach(item => { %>
+            <% for(let index=messages.length-1;index>=0;index--) { %>
                 <li class="bg-white rounded-lg shadow-md p-4 mb-4">
                     <div class="flex justify-between items-center">
                         <span class="font-semibold text-lg">
-                           <%= item.user %>
+                           <%= messages[index].user %>
                         </span>
                         <span class="text-sm text-gray-500">
-                            Added: <%= item.added %>
+                            <%= messages[index].added %>
                         </span>
                     </div>
                     <p class="mt-2">
-                        <%= item.text %>
+                        <%= messages[index].text %>
                     </p>
                 </li>
-            <% }); %>
+            <% } %>
         </ul>
     </div>
 </body>

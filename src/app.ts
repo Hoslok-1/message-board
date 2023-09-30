@@ -2,7 +2,6 @@ import path from 'path';
 
 import express from 'express';
 
-import userRouter from './routes/users';
 import indexRouter from './routes/index';
 
 const app = express();
@@ -14,12 +13,8 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '../src/views')));
 
 
-app.use('/users', userRouter);
-app.use('/index', indexRouter);
+app.use('/', indexRouter);
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
