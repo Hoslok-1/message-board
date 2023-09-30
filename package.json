@@ -9,7 +9,8 @@
     "lint": "eslint \"src/**/*.ts\"",
     "build:css": "tailwindcss build src/styles/tailwind.css -o src/views/styles.css",
     "watch:ts": "tsc -w",
-    "watch:css": "tailwindcss -i src/styles/tailwind.css -o src/views/styles.css --watch",    "dev": "concurrently \"npm:watch:ts\" \"npm:watch:css\" \"nodemon dist/app.js\""
+    "watch:css": "tailwindcss -i src/styles/tailwind.css -o src/views/styles.css --watch",
+    "dev": "concurrently \"npm:watch:ts\" \"npm:watch:css\" \"nodemon dist/app.js\""
   },
   "keywords": [],
   "author": "",
