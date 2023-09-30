@@ -4,6 +4,8 @@
 
 This is a message board application built using Node.js, Express, TypeScript, and Tailwind CSS. Users can post messages with their names, which are then displayed on the main page.
 
+Live Link: https://hoslok-message-board.onrender.com/
+
 ## Features
 
 - **Post Messages**: Users can post messages through a simple form.
