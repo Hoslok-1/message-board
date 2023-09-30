@@ -13,6 +13,4 @@ app.set('views', path_1.default.join(__dirname, '../src/views'));
 app.use(express_1.default.urlencoded({ extended: false }));
 app.use(express_1.default.static(path_1.default.join(__dirname, '../src/views')));
 app.use('/', index_1.default);
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
-});
+app.listen(port);

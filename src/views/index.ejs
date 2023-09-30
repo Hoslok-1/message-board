@@ -15,18 +15,18 @@
             </a>
         </div>
         <ul>
-            <% for(let index=messages.length-1;index>=0;index--) { %>
+            <% for(let index=messagesArr.length-1;index>=0;index--) { %>
                 <li class="bg-white rounded-lg shadow-md p-4 mb-4">
                     <div class="flex justify-between items-center">
                         <span class="font-semibold text-lg">
-                           <%= messages[index].user %>
+                           <%= messagesArr[index].user %>
                         </span>
                         <span class="text-sm text-gray-500">
-                            <%= messages[index].added %>
+                            <%= messagesArr[index].added %>
                         </span>
                     </div>
                     <p class="mt-2">
-                        <%= messages[index].text %>
+                        <%= messagesArr[index].text %>
                     </p>
                 </li>
             <% } %>

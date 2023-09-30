@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const router = (0, express_1.Router)();
+// Initial set of messages to be displayed as soon as user comes to the site.
 const messages = [
     {
         text: 'Hi there!',
@@ -15,8 +16,7 @@ const messages = [
     },
 ];
 router.get('/', (req, res) => {
-    // eslint-disable-next-line object-shorthand
-    res.render('index', { title: 'Mini Message Board', messages: messages });
+    res.render('index', { title: 'Mini Message Board', messagesArr: messages });
 });
 router.get('/new', (req, res) => {
     res.render('form');

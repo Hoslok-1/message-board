@@ -8,6 +8,7 @@ interface MessageProperties{
   added: Date;
 }
 
+// Initial set of messages to be displayed as soon as user comes to the site.
 const messages: MessageProperties[] = [
   {
     text: 'Hi there!',
@@ -22,8 +23,7 @@ const messages: MessageProperties[] = [
 ];
 
 router.get('/', (req: Request, res: Response) => {
-  // eslint-disable-next-line object-shorthand
-  res.render('index', {title: 'Mini Message Board', messages: messages});
+  res.render('index', {title: 'Mini Message Board', messagesArr: messages});
 });
 
 router.get('/new', (req: Request, res: Response) => {
